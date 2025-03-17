@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Check licenses
       run: |
@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Update Rust
       run: rustup toolchain install stable --component clippy --component rustfmt
@@ -89,7 +89,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Update Rust
       run: |
@@ -134,10 +134,10 @@ jobs:
 
     steps:
     - name: Checkout (test framework)
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Checkout (Rust SDK)
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         repository: proxy-wasm/proxy-wasm-rust-sdk
         path: proxy-wasm-rust-sdk
@@ -195,7 +195,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Run cargo outdated
       run: cargo outdated --exit-code 1
@@ -204,7 +204,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Run cargo audit
       run: |
